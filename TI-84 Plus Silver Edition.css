@@ -1,0 +1,26 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 26, 2021, 6:16:47 PM
+    Author     : Matthew Paul Mangus @ matthewmangus.com
+*/
+#WholeCalc {
+    position: relative;
+}
+#ScreenOutput {
+    position:absolute;
+    background-color:black;
+    top:23px;
+    left:81px;
+    bottom: 68px;
+    right: 150px;
+    z-index: 2;
+}
+
+
+map {
+    display:flex;
+}
