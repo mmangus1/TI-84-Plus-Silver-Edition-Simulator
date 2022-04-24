@@ -4,8 +4,8 @@
  * and open the template in the editor.
  */
 
-var alphaonoff = "Off"; // a alphaonoff value of 1 is for alpha key not being active, alphaonoff value of 2 is for alpha active - not locked, alphaonoff value of 3 is alpha key active and locked.
-var secondonoff = "Off"; // value of "Off" is second key not active, value of "On" means second key is active
+var alphaonoff = false; // a alphaonoff value of 1 is for alpha key not being active, alphaonoff value of 2 is for alpha active - not locked, alphaonoff value of 3 is alpha key active and locked.
+var secondonoff = false; // value of "Off" is second key not active, value of "On" means second key is active
 var screencommands = ""; // Outputs to sreen as text, I set this to blank so nothing is on screen at start.
 var javascriptcommands = ""; // a string meant to hold data and be excuted to by the eval function to return the answers.
 var value = ""; // string that changes the execution based on buttons pushed.
@@ -13,10 +13,21 @@ var value = ""; // string that changes the execution based on buttons pushed.
 //TODO: Reposition canvas correctly, so when ran buttons work.
 //TODO: Find working way to make cursor blink on/off.
 
+
+
+
 function ScreenOutput(value){
     
+    if (value === "2nd"){
+        secondonoff=!secondonoff;
+    }
+    
+    if (value === "ALPHA"){
+        alphaonoff=!alphaonoff;
+    }
+    
     //Alpha Key On, Second Key Off
-    if ((alphaonoff === "On") && (secondonoff === "On")){
+    if ((alphaonoff === true) && (secondonoff === true)){
         
         switch(value){
             case "undefined":
@@ -25,6 +36,8 @@ function ScreenOutput(value){
                 
             //CATALOG Function    
             case "0":
+                break;
+                
                 
                 
         }
@@ -33,15 +46,15 @@ function ScreenOutput(value){
     
     
     //Alpha Key On, Second Key Off
-    if ((alphaonoff === "On") && (secondonoff === "Off")) {
+    if ((alphaonoff === true) && (secondonoff === false)) {
     }
     
     //Second Key On, Alpha Key Off
-    if ((secondonoff === "On") && (alphaonoff === "Off")){
+    if ((secondonoff === true) && (alphaonoff === false)){
         
     }
     //Second and Alpha Keys both Off or both On
-    if ((secondonoff === "Off") && (alphaonoff === "Off")){
+    if ((secondonoff === false) && (alphaonoff === false)){
         
         // Take value variable that corresponds to keys and make the buttons do as they should.
         switch(value){
@@ -168,8 +181,14 @@ function ScreenOutput(value){
             javascriptcommands+="**2";
             break;
         case "LOG":
+            screencommands+="Log(";
+            document.getElementById("ScreenOutput").innerHTML = screencommands;
+            javascriptcommands+="Math.log(";
             break;
         case "LN":
+            screencommands+="ln(";
+            document.getElementById("ScreenOutput").innerHTML = screencommands;
+            javascriptcommands+="Math.LN(";
             break;
         case "STO":
             break;
