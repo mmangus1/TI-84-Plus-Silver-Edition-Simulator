@@ -203,6 +203,10 @@ function ScreenOutput(value){
         case "COMMA":
             break;
         case "DEL":
+            screencommands.slice(0, -1);
+            document.getElementById("ScreenOutput").innerHTML = screencommands;
+            javascriptcommands.slice(0, -1);
+            //TODO: Add more code to remove whole mathematic functions in the javascriptcommands and screencommands strings.
             break;
         case "STAT":
             break;
