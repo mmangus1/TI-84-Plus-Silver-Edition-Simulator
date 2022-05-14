@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 
+var onoff = true; // on off
 var alphaonoff = false; // a alphaonoff value of 1 is for alpha key not being active, alphaonoff value of 2 is for alpha active - not locked, alphaonoff value of 3 is alpha key active and locked.
 var secondonoff = false; // value of "Off" is second key not active, value of "On" means second key is active
 var screencommands = ""; // Outputs to sreen as text, I set this to blank so nothing is on screen at start.
@@ -193,20 +194,33 @@ function ScreenOutput(value){
         case "STO":
             break;
         case "ONOFF":
+            if (onoff===true){
+                document.getElementById("ScreenOutput").style.display = "block";
+            }
+            else if (onoff===false) {
+                document.getElementById("ScreenOutput").style.display = "none";
+            }
+            onoff = !onoff;
             break;
         case "MODE":
             break;
         case "APPS":
             break;
         case "SIN":
+            screencommands+="sin(";
+            document.getElementById("ScreenOutput").innerHTML = screencommands;
+            javascriptcommands+="Math.sin(";
             break;
         case "COMMA":
+            screencommands+=",";
+            document.getElementById("ScreenOutput").innerHTML = screencommands;
+            javascriptcommands+=",";
             break;
         case "DEL":
             screencommands.slice(0, -1);
             document.getElementById("ScreenOutput").innerHTML = screencommands;
             javascriptcommands.slice(0, -1);
-            //TODO: Add more code to remove whole mathematic functions in the javascriptcommands and screencommands strings.
+            //TODO: Add more code to remove whole mathematic functions in the javascriptcommands string.
             break;
         case "STAT":
             break;
