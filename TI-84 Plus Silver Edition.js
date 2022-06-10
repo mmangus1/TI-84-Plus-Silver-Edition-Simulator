@@ -4,13 +4,14 @@
  * and open the template in the editor.
  */
 
-var onoff = true; // on off
+var onoff = true; // on off boolean
 var alphaonoff = false; // a alphaonoff value of 1 is for alpha key not being active, alphaonoff value of 2 is for alpha active - not locked, alphaonoff value of 3 is alpha key active and locked.
 var secondonoff = false; // value of "Off" is second key not active, value of "On" means second key is active
 var screencommands = ""; // Outputs to sreen as text, I set this to blank so nothing is on screen at start.
 var javascriptcommands = ""; // a string meant to hold data and be excuted to by the eval function to return the answers.
 var value = ""; // string that changes the execution based on buttons pushed.
-
+var statplot1onoff = false;
+var statplot1status = "Off";
 //TODO: Reposition canvas correctly, so when ran buttons work.
 //TODO: Find working way to make cursor blink on/off.
 
@@ -35,9 +36,6 @@ function ScreenOutput(value){
                 value="";
                 break;
                 
-            //CATALOG Function    
-            case "0":
-                break;
                 
                 
                 
@@ -52,6 +50,44 @@ function ScreenOutput(value){
     
     //Second Key On, Alpha Key Off
     if ((secondonoff === true) && (alphaonoff === false)){
+        switch (value){
+            // Incase value isn't set
+            case "undefined":
+                value = "";
+                break;
+                
+            //TOP ROW KEYS, LEFT TO RIGHT
+            
+            
+            function statplot1onofffun(statplot1onoff){
+                if (statplot1onoff === true){
+                    return "On";
+                }
+                else{
+                    return "Off";
+                }
+            }
+            //STAT PLOT/Y=
+            case "Y=":
+                document.getElementById("ScreenOutput").innerHTML = '<div class=statplotmenu"><p class="statplotmenu">STATPLOTS</p>' + '<br/>' + '<a href="">1:</a>Plot1...' + statplot1onofffun(statplot1onoff) + '<br />' + '<img src="" alt=""/>' + '<p>L1</p>';
+                break;
+            
+            // CATALOG function
+            case "0":
+                document.getElementById("ScreenOutput").innerHTML = '<div class="catalogmenu"><p class="catalogheader">CATALOG</p><br/><a href="#home">abs(</a><br/><a href="#news">and</a><br/><a href="#contact">Contact</a><br/><a href="#about">About</a></div>';
+                break;
+            // imaginary number
+            case ".":
+                screencommands+="i";
+                document.getElementById("ScreenOutput").innerHTML = screencommands;
+                javascriptcommands+="math.i";
+                break;
+            // First column keys upper left down
+            
+    
+                
+                
+        }
         
     }
     //Second and Alpha Keys both Off or both On
@@ -227,16 +263,36 @@ function ScreenOutput(value){
         case "PGRM":
             break;
         case "COS":
+            screencommands+="cos(";
+            document.getElementById("ScreenOutput").innerHTML = screencommands;
+            javascriptcommands+="Math.cos(";
             break;
         case "(":
+            screencommands+="(";
+            document.getElementById("ScreenOutput").innerHTML = screencommands;
+            javascriptcommands+="(";
             break;
         case ".":
+            screencommands+=".";
+            document.getElementById("ScreenOutput").innerHTML = screencommands;
+            javascriptcommands+=".";
             break;
         case "VARS":
             break;
         case "TAN":
+            screencommands+="tan(";
+            document.getElementById("ScreenOutput").innerHTML = screencommands;
+            javascriptcommands+="Math.tan(";
             break;
         case ")":
+            screencommands+=")";
+            document.getElementById("ScreenOutput").innerHTML = screencommands;
+            javascriptcommands+=")";
+            break;
+        case "HYPHEN":
+            screencommands+="-"; //HYPHEN-MINUS
+            document.getElementById("ScreenOutput").innerHTML = screencommands;
+            javascriptcommands+="-";
             break;
         case "UP":
             break;
