@@ -12,15 +12,28 @@ and open the template in the editor.
 }
 #ScreenOutput {
     position:absolute;
-    background-color:black;
+    opacity: 0;
     top:23px;
     left:81px;
     bottom: 68px;
     right: 150px;
     z-index: 2;
 }
-
+#calcimg {
+    height:100%;
+    width:100%;
+}
 
 map {
     display:flex;
+}
+
+
+/* Have to add scrollability https://www.w3schools.com/howto/howto_css_menu_horizontal_scroll.asp https://www.w3schools.com/howto/howto_css_vertical_menu.asp */
+.catalogheader {
+    font-size: 8px;
+}
+.catalogmenu {
+        overflow: auto;
+    white-space: nowrap;
 }
