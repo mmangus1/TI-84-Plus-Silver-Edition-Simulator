@@ -11,13 +11,13 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" href="TI-84 Plus Silver Edition.css" type="text/css"/>
 
-
+        <script type="text/javascript" src="mathjs.js"></script>
         <script type="text/javascript" src="TI-84 Plus Silver Edition.js"></script>
     </head>
     <body>
         <div id="WholeCalc">
-            <div id="ScreenOutput"></div>
-            <img src = "TI-84 Plus Silver Edition.jpg" alt = "usemap" usemap="#keys" width="225" height="225" />
+            <textarea rows="8" cols="16" id="ScreenOutput" onchange="countcharacters(screencommands)" readonly></textarea> <!-- Have to find a way to make the buttons responsive to screen container and image sizes -->
+            <img src = "TI-84 Plus Silver Edition.jpg" alt = "usemap" usemap="#keys" id="calcimg"/>
             
             <!-- TODO: Typing code in below div tag shows up on screen, need to format the text and make it variably enter able for correct screen output to work. -->
             
@@ -237,7 +237,7 @@ and open the template in the editor.
                 
                 <!-- (-) Key -->
                 <a href="" title="(-)/ANS/?">
-                    <area shape="rect" coords="124,186,136,196" alt="(-) Button" onclick="ScreenOutput('-'); return false;" href="" />
+                    <area shape="rect" coords="124,186,136,196" alt="(-) Button" onclick="ScreenOutput('HYPHEN'); return false;" href="" />
                 </a>
                 
                 
