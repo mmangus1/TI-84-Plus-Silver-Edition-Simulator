@@ -16,6 +16,16 @@ var statplot1status = "Off";
 //TODO: Find working way to make cursor blink on/off.
 
 
+//TODO: Find Every Multiple Beyond 16 of charcters and add a line break for every 16 characters.
+function countcharacters(screencommands){
+    var screenlength = screencommands.length;
+    if (screenlength >= 16){
+        
+    }
+            
+}
+
+
 function statplot1onofffun(statplot1onoff){
     if (statplot1onoff === true){
         return "On";
@@ -27,32 +37,23 @@ function statplot1onofffun(statplot1onoff){
 
 function ScreenOutput(value){
     
+    
+    // Negate Value of 2nd Key On Click Of 2nd Key:
     if (value === "2nd"){
         secondonoff=!secondonoff;
     }
     
+    
+    // Negate Value of Alpha Key On Click Of Alpha Key:
     if (value === "ALPHA"){
         alphaonoff=!alphaonoff;
     }
     
-    //Alpha Key On, Second Key Off
-    if ((alphaonoff === true) && (secondonoff === true)){
-        
-        switch(value){
-            case "undefined":
-                value="";
-                break;
-                
-                
-                
-                
-        }
-        
-    }
+  
     
     
-    //Alpha Key On, Second Key Off
-    if ((alphaonoff === true) && (secondonoff === false)) {
+    // Alpha Key On and Second Key Off OR Alpha Key On and Second Key On; Alpha Takes Presedence
+    if (((alphaonoff === true) && (secondonoff === false)) || ((alphaonoff === true) && (secondonoff === true))) {
         switch (value){
             
             
@@ -232,12 +233,30 @@ function ScreenOutput(value){
             // SOLVE Key Code:
             case "ENTER":
                 break;
+               
+               
+            // Directional Arrow Key Codes:
+            
+            
+            // Up Arrow Key Code:
+            case "UP":
+                break;
                 
+            // Down Arrow Key Code:
+            case "DOWN":
+                break;
                 
+            // Right Arrow Key Code:
+            case "RIGHT":
+                break;
+                
+            // Left Arrow Key Code:
+            case "LEFT":
+                break;
         }
     }
     
-    //Second Key On, Alpha Key Off
+    // Second Key On, Alpha Key Off
     if ((secondonoff === true) && (alphaonoff === false)){
         switch (value){
             // Incase value isn't set
@@ -507,7 +526,9 @@ function ScreenOutput(value){
         }
         
     }
-    //Second and Alpha Keys both Off or both On
+    
+    
+    // Second and Alpha Keys both Off
     if ((secondonoff === false) && (alphaonoff === false)){
         
         // Take value variable that corresponds to keys and make the buttons do as they should.
