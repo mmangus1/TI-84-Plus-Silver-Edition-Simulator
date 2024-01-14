@@ -1,5 +1,5 @@
 # TI-84-Plus-Silver-Edition-Simulator
-A web based TI-84 Calculator Simulator, I wanted a replica simulation of a TI-84 calculator I own so the world can use it when the actual physical calculator disapppears from shelves. I used an image of the calculator and wrote the rest in HTML5, CSS3 and Javascript.
+A web based TI-84 Calculator Simulator, I wanted a replica simulation of a TI-84 calculator I own so the world can use it when the actual physical calculator disappears from shelves. I used an image of the calculator and wrote the rest in HTML5, CSS3 and Javascript.
 
 This is still a work in progress.
 
