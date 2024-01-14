@@ -9,6 +9,8 @@ and open the template in the editor.
 */
 #WholeCalc {
     position: relative;
+    max-width: 225px;
+    max-height: 225px;
 }
 #ScreenOutput {
     position:absolute;
