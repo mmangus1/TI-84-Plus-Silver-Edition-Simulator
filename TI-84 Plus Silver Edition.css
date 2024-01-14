@@ -36,6 +36,6 @@ map {
     font-size: 8px;
 }
 .catalogmenu {
-        overflow: auto;
+    overflow: auto;
     white-space: nowrap;
 }
