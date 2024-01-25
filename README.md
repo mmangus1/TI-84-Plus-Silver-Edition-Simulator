@@ -9,4 +9,4 @@ This is still a work in progress.
 3. Making the image responsive, so that it plays well with different screens.
     3. I set max-height and width properties to the dimensions of the jpeg image pixels, works much better now
 4. Properly formatting output of problems so the use of the program more accuretly represents the actual calculator, such as aligning answers to the right.
-
+5. Meeting style guides and best practices - currently WIP
