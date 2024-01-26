@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-Change Pages to meet style guide and best practices.
+  Change Pages to meet style guide and best practices.
 -->
 <html>
   <head>
@@ -11,30 +11,30 @@ Change Pages to meet style guide and best practices.
     <script type="text/javascript" src="mathjs.js"></script>
     <script type="text/javascript" src="TI-84 Plus Silver Edition.js"></script>
   </head>
-    <body>
-      <div id="WholeCalc">
-        <textarea rows="8" cols="16" id="ScreenOutput"
-        onchange="countcharacters(screencommands)" readonly>
-        </textarea> 
-        <!-- 
-            Have to find a way to make the buttons responsive to screen
-            container and image sizes 
-        -->
-        <img src = "TI-84 Plus Silver Edition.jpg" 
-        alt = "usemap" usemap="#keys" id="calcimg"/>
-        <!-- 
-            TODO: Typing code in below div tag shows up on screen, 
-            need to format the text and make it variably enter able for
-            correct screen output to work. 
-        -->
-          <map name = "keys">
-            <!-- 
-                TODO: add "return false;" after every onclick function, 
-                and some more mathematical logic 
-            -->
-            <!-- Top Row Keys -->
-            <!-- Y Equals Key -->
-            <a href="" title="Y=/STAT PLOT/F1">
+  <body>
+    <div id="WholeCalc">
+      <textarea rows="8" cols="16" id="ScreenOutput"
+      onchange="countcharacters(screencommands)" readonly>
+      </textarea> 
+      <!-- 
+        Have to find a way to make the buttons responsive to screen
+        container and image sizes 
+      -->
+      <img src = "TI-84 Plus Silver Edition.jpg" 
+      alt = "usemap" usemap="#keys" id="calcimg"/>
+      <!-- 
+        TODO: Typing code in below div tag shows up on screen, 
+        need to format the text and make it variably enter able for
+        correct screen output to work. 
+      -->
+      <map name = "keys">
+      <!-- 
+        TODO: add "return false;" after every onclick function, 
+        and some more mathematical logic 
+      -->
+      <!-- Top Row Keys -->
+      <!-- Y Equals Key -->
+      <a href="" title="Y=/STAT PLOT/F1">
               <area shape="rect" coords="81,75,92,79" alt="Y Equals Button"
               onclick="ScreenOutput('Y='); return false;" href="" />
             </a>
@@ -112,215 +112,234 @@ Change Pages to meet style guide and best practices.
               onclick="ScreenOutput('ONOFF'); return false;" 
               href="" />
             </a>
-                
-                
-                
-                
-                <!-- Second Column Keys -->
-                
-                <!-- Mode Key -->
-                <a href="" title="MODE/QUIT">
-                    <area shape="rect" coords="95,93,106,99" alt="Mode Button" onclick="ScreenOutput('MODE'); return false;" href="" />
-                </a>
-                
-                <!-- X,T,e,n Variables Key -->
-                <a href="" title="X,T,e,n/LINK">
-                    <area shape="rect" coords="95,103,106,110" alt="Variable X,T,e,n Button" onclick="ScreenOutput('VAR'); return false;" href="" />
-                </a>
-                
-                <!-- APPS Key -->
-                <a href="" title="APPS/ANGLE/B">
-                    <area shape="rect" coords="95,114,106,120" alt="APPS Button" onclick="ScreenOutput('APPS'); return false;" href="" />
-                </a>
-                
-                <!-- SIN Key -->
-                <a href="" title="SIN/SIN^-1/E">
-                    <area shape="rect" coords="95,124,106,130" alt="SIN Button" onclick="ScreenOutput('SIN'); return false;" href="" />
-                </a>
-                
-                <!-- , Key -->
-                <a href="" title=",/EE/J">
-                    <area shape="rect" coords="95,135,106,141" alt="Comma Button" onclick="ScreenOutput('COMMA'); return false;" href="" />
-                </a>
-                
-                <!-- 7 Key -->
-                <a href="" title="7/u/O">
-                    <area shape="rect" coords="95,144,107,153" alt="Seven Button" onclick="ScreenOutput('7'); return false;" href="" />
-                </a>
-                
-                <!-- 4 Key -->
-                <a href="" title="4/L4/T">
-                    <area shape="rect" coords="95,159,107,167" alt="Four Button" onclick="ScreenOutput('4'); return false;" href="" />
-                </a>
-                
-                <!-- 1 Key -->
-                <a href="" title="1/L1/Y">
-                    <area shape="rect" coords="95,173,107,182" alt="One Button" onclick="ScreenOutput('1'); return false;" href="" />
-                </a>
-                
-                <!-- 0 Key -->
-                <a href="" title="0/CATALOG/SPACE">
-                    <area shape="rect" coords="95,187,107,196" alt="Zero Button" onclick="ScreenOutput('0'); return false;" href="" />
-                </a>
-                
-                
-                
-                <!-- Third Column Keys -->
-                
-                <!-- DEL Key -->
-                <a href="" title="DEL/INS">
-                    <area shape="rect" coords="109,94,121,100" alt="DEL Button" onclick="ScreenOutput('DEL'); return false;" href="" />
-                </a>
-                
-                <!-- STAT Key -->
-                <a href="" title="STAT/LIST">
-                    <area shape="rect" coords="109,104,121,110" alt="STAT Button" onclick="ScreenOutput('STAT'); return false;" href="" />
-                </a>
-                
-                <!-- PRGM Key -->
-                <a href="" title="PGRM/DRAW/C">
-                    <area shape="rect" coords="109,114,121,121" alt="PRGM Button" onclick="ScreenOutput('PGRM'); return false;" href="" />
-                </a>
-                
-                <!-- COS Key -->
-                <a href="" title="COS/Cos^-1/F">
-                    <area shape="rect" coords="109,125,121,131" alt="COS Button" onclick="ScreenOutput('COS'); return false;" href="" />
-                </a>
-                
-                <!-- ( Key -->
-                <a href="" title="(/{/K">
-                    <area shape="rect" coords="109,135,121,141" alt="( Button" onclick="ScreenOutput('('); return false;" href="" />
-                </a>
-                
-                <!-- 8 Key -->
-                <a href="" title="8/v/P">
-                    <area shape="rect" coords="109,146,121,154" alt="Eight Button" onclick="ScreenOutput('8'); return false;" href="" />
-                </a>
-                
-                <!-- 5 Key -->
-                <a href="" title="5/L5/U">
-                    <area shape="rect" coords="109,159,121,168" alt="Five Button" onclick="ScreenOutput('5'); return false;" href="" />
-                </a>
-                
-                <!-- 2 Key -->
-                <a href="" title="2/L2/Z">
-                    <area shape="rect" coords="109,173,121,182" alt="Two Button" onclick="ScreenOutput('2'); return false;" href="" />
-                </a>
-                
-                <!-- Period Key -->
-                <a href="" title="./i/:">
-                    <area shape="rect" coords="109,187,121,197" alt="Period Button" onclick="ScreenOutput('.'); return false;" href="" />
-                </a>
-                
-                
-                
-                <!-- Fourth Column Keys -->
-                
-                <!-- VARS Key -->
-                <a href="" title="VARS/DISTR">
-                    <area shape="rect" coords="124,114,135,120" alt="VARS Button" onclick="ScreenOutput('VARS'); return false;" href="" />
-                </a>
-                
-                <!-- TAN Key -->
-                <a href="" title="TAN/TAN^-1/G">
-                    <area shape="rect" coords="124,124,136,130" alt="TAN Button" onclick="ScreenOutput('TAN'); return false;" href="" />
-                </a>
-                
-                <!-- ) Key -->
-                <a href="" title=")/}/L">
-                    <area shape="rect" coords="124,135,135,141" alt=") Button" onclick="ScreenOutput(')'); return false;" href="" />
-                </a>
-                
-                <!-- 9 Key -->
-                <a href="" title="9/w/O">
-                    <area shape="rect" coords="124,145,136,154" alt="Nine Button" onclick="ScreenOutput('9'); return false;" href="" />
-                </a>
-                
-                <!-- 6 Key -->
-                <a href="" title="6/L6/V">
-                    <area shape="rect" coords="124,158,136,167" alt="Six Button" onclick="ScreenOutput('6'); return false;" href="" />
-                </a>
-                
-                <!-- 3 Key -->
-                <a href="" title="3/L3/THETA">
-                    <area shape="rect" coords="124,172,136,181" alt="Three Button" onclick="ScreenOutput('3'); return false;" href="" />
-                </a>
-                
-                <!-- (-) Key -->
-                <a href="" title="(-)/ANS/?">
-                    <area shape="rect" coords="124,186,136,196" alt="(-) Button" onclick="ScreenOutput('HYPHEN'); return false;" href="" />
-                </a>
-                
-                
-                
-                <!-- Fifth Column Keys -->
-                
-                <!-- CLEAR Key -->
-                <a href="" title="CLEAR">
-                    <area shape="rect" coords="138,112,150,118" alt="CLEAR Button" onclick="ScreenOutput('CLEAR'); return false;" href="" />
-                </a>
-                
-                <!-- ^ Key -->
-                <a href="" title="^/Pi/H">
-                    <area shape="rect" coords="138,123,150,129" alt="^ Button" onclick="ScreenOutput('**'); return false;" href="" />
-                </a>
-                
-                <!-- Division (/) Key -->
-                <a href="" title="DIVIDE/e/M">
-                    <area shape="rect" coords="138,132,150,139" alt="Division Button" onclick="ScreenOutput('/'); return false;" href="" />
-                </a>
-                
-                <!-- Multiplication (x) Key -->
-                <a href="" title="MULTIPLY/[/R">
-                    <area shape="rect" coords="138,144,150,149" alt="Multiplication Button" onclick="ScreenOutput('*'); return false;" href="" />
-                </a>
-                
-                <!-- Subtraction (-) Key -->
-                <a href="" title="SUBTRACT/]/W">
-                    <area shape="rect" coords="138,154,150,160" alt="Subtraction Button" onclick="ScreenOutput('-'); return false;" href="" />
-                </a>
-                
-                <!-- Addition (+) Key -->
-                <a href="" title='ADDITION/MEM/"'>
-                    <area shape="rect" coords="138,165,150,172" alt="Addition Button" onclick="ScreenOutput('+'); return false;" href="" />
-                </a>
-                
-                <!-- ENTER Key -->
-                <a href="" title="ENTER/ENTRY/SOLVE">
-                    <area shape="rect" coords="138,175,149,188" alt="Enter Button" onclick="ScreenOutput('ENTER'); return false;" href="" />
-                </a>
-                
-                
-                
-                <!-- Directional Arrow Keys -->
-                
-                <!-- Up Arrow Key -->
-                <a href="" title="UP ARROW">
-                    <area shape="rect" coords="134,86,143,96" alt="Up Button" onclick="ScreenOutput('UP'); return false;" href="" />
-                </a>
-                
-                <!-- Down Arrow Key -->
-                <a href="" title="DOWN ARROW">
-                    <area shape="rect" coords="134,99,143,109" alt="Down Button" onclick="ScreenOutput('DOWN'); return false;" href="" />
-                </a>
-                
-                <!-- Right Arrow Key -->
-                <a href="" title="RIGHT ARROW">
-                    <area shape="rect" coords="144,93,153,102" alt="Right Button" onclick="ScreenOutput('RIGHT'); return false;" href="" />
-                </a>
-                
-                <!-- Left Arrow Key -->
-                <a href="" title="LEFT ARROW">
-                    <area shape="rect" coords="125,93,134,102" alt="Left Button" onclick="ScreenOutput('LEFT'); return false;" href="" />
-                </a>
-                
-                
-                <!-- TODO: start on javascript code, end all tags correctly and tooltips on hover to see what each button is easier 
-                Add classes for each a tag on each button to display tooltips on hover-->
-         
-         
-            </map>
-         
-        </div>
+            <!-- Second Column Keys -->
+            <!-- Mode Key -->
+            <a href="" title="MODE/QUIT">
+              <area shape="rect" coords="95,93,106,99" alt="Mode Button" 
+              onclick="ScreenOutput('MODE'); return false;" href="" />
+            </a>
+            <!-- X,T,e,n Variables Key -->
+            <a href="" title="X,T,e,n/LINK">
+              <area shape="rect" coords="95,103,106,110" 
+              alt="Variable X,T,e,n Button" 
+              onclick="ScreenOutput('VAR'); return false;" href="" />
+            </a>
+            <!-- APPS Key -->
+            <a href="" title="APPS/ANGLE/B">
+              <area shape="rect" coords="95,114,106,120" 
+              alt="APPS Button" 
+              onclick="ScreenOutput('APPS'); return false;" href="" />
+            </a>
+            <!-- SIN Key -->
+            <a href="" title="SIN/SIN^-1/E">
+              <area shape="rect" coords="95,124,106,130" 
+              alt="SIN Button" 
+              onclick="ScreenOutput('SIN'); return false;" href="" />
+            </a>
+            <!-- , Key -->
+            <a href="" title=",/EE/J">
+              <area shape="rect" coords="95,135,106,141" 
+              alt="Comma Button" 
+              onclick="ScreenOutput('COMMA'); return false;" href="" />
+            </a>
+            <!-- 7 Key -->
+            <a href="" title="7/u/O">
+              <area shape="rect" coords="95,144,107,153" 
+              alt="Seven Button" 
+              onclick="ScreenOutput('7'); return false;" href="" />
+            </a>
+            <!-- 4 Key -->
+            <a href="" title="4/L4/T">
+              <area shape="rect" coords="95,159,107,167" 
+              alt="Four Button" 
+              onclick="ScreenOutput('4'); return false;" href="" />
+            </a>
+            <!-- 1 Key -->
+            <a href="" title="1/L1/Y">
+              <area shape="rect" coords="95,173,107,182" 
+              alt="One Button" 
+              onclick="ScreenOutput('1'); return false;" href="" />
+            </a>
+            <!-- 0 Key -->
+            <a href="" title="0/CATALOG/SPACE">
+              <area shape="rect" coords="95,187,107,196" 
+              alt="Zero Button" 
+              onclick="ScreenOutput('0'); return false;" href="" />
+            </a>
+            <!-- Third Column Keys -->
+            <!-- DEL Key -->
+            <a href="" title="DEL/INS">
+              <area shape="rect" coords="109,94,121,100" 
+              alt="DEL Button" 
+              onclick="ScreenOutput('DEL'); return false;" href="" />
+            </a>
+            <!-- STAT Key -->
+            <a href="" title="STAT/LIST">
+              <area shape="rect" coords="109,104,121,110" 
+              alt="STAT Button" 
+              onclick="ScreenOutput('STAT'); return false;" href="" />
+            </a>
+            <!-- PRGM Key -->
+            <a href="" title="PGRM/DRAW/C">
+              <area shape="rect" coords="109,114,121,121" 
+              alt="PRGM Button" 
+              onclick="ScreenOutput('PGRM'); return false;" href="" />
+            </a>
+            <!-- COS Key -->
+            <a href="" title="COS/Cos^-1/F">
+              <area shape="rect" coords="109,125,121,131" 
+              alt="COS Button" 
+              onclick="ScreenOutput('COS'); return false;" href="" />
+            </a>
+            <!-- ( Key -->
+            <a href="" title="(/{/K">
+              <area shape="rect" coords="109,135,121,141" 
+              alt="( Button" 
+              onclick="ScreenOutput('('); return false;" href="" />
+            </a>
+            <!-- 8 Key -->
+            <a href="" title="8/v/P">
+              <area shape="rect" coords="109,146,121,154" 
+              alt="Eight Button" 
+              onclick="ScreenOutput('8'); return false;" href="" />
+            </a>
+            <!-- 5 Key -->
+            <a href="" title="5/L5/U">
+              <area shape="rect" coords="109,159,121,168" 
+              alt="Five Button" 
+              onclick="ScreenOutput('5'); return false;" href="" />
+            </a>
+            <!-- 2 Key -->
+            <a href="" title="2/L2/Z">
+              <area shape="rect" coords="109,173,121,182" 
+              alt="Two Button" 
+              onclick="ScreenOutput('2'); return false;" href="" />
+            </a>
+            <!-- Period Key -->
+            <a href="" title="./i/:">
+              <area shape="rect" coords="109,187,121,197" 
+              alt="Period Button" 
+              onclick="ScreenOutput('.'); return false;" href="" />
+            </a>
+            <!-- Fourth Column Keys -->
+            <!-- VARS Key -->
+            <a href="" title="VARS/DISTR">
+              <area shape="rect" coords="124,114,135,120" 
+              alt="VARS Button" 
+              onclick="ScreenOutput('VARS'); return false;" href="" />
+            </a>
+            <!-- TAN Key -->
+            <a href="" title="TAN/TAN^-1/G">
+              <area shape="rect" coords="124,124,136,130" 
+              alt="TAN Button" 
+              onclick="ScreenOutput('TAN'); return false;" href="" />
+            </a>
+            <!-- ) Key -->
+            <a href="" title=")/}/L">
+              <area shape="rect" coords="124,135,135,141" 
+              alt=") Button" 
+              onclick="ScreenOutput(')'); return false;" href="" />
+            </a>
+            <!-- 9 Key -->
+            <a href="" title="9/w/O">
+              <area shape="rect" coords="124,145,136,154" 
+              alt="Nine Button" 
+              onclick="ScreenOutput('9'); return false;" href="" />
+            </a>
+            <!-- 6 Key -->
+            <a href="" title="6/L6/V">
+              <area shape="rect" coords="124,158,136,167" 
+              alt="Six Button" 
+              onclick="ScreenOutput('6'); return false;" href="" />
+            </a>
+            <!-- 3 Key -->
+            <a href="" title="3/L3/THETA">
+              <area shape="rect" coords="124,172,136,181" 
+              alt="Three Button" 
+              onclick="ScreenOutput('3'); return false;" href="" />
+            </a>
+            <!-- (-) Key -->
+            <a href="" title="(-)/ANS/?">
+              <area shape="rect" coords="124,186,136,196" 
+              alt="(-) Button" 
+              onclick="ScreenOutput('HYPHEN'); return false;" href="" />
+            </a>
+            <!-- Fifth Column Keys -->
+            <!-- CLEAR Key -->
+            <a href="" title="CLEAR">
+              <area shape="rect" coords="138,112,150,118" 
+              alt="CLEAR Button" 
+              onclick="ScreenOutput('CLEAR'); return false;" href="" />
+            </a>
+            <!-- ^ Key -->
+            <a href="" title="^/Pi/H">
+              <area shape="rect" coords="138,123,150,129" 
+              alt="^ Button" 
+              onclick="ScreenOutput('**'); return false;" href="" />
+            </a>
+            <!-- Division (/) Key -->
+            <a href="" title="DIVIDE/e/M">
+              <area shape="rect" coords="138,132,150,139" 
+              alt="Division Button" 
+              onclick="ScreenOutput('/'); return false;" href="" />
+            </a>
+            <!-- Multiplication (x) Key -->
+            <a href="" title="MULTIPLY/[/R">
+              <area shape="rect" coords="138,144,150,149" 
+              alt="Multiplication Button" 
+              onclick="ScreenOutput('*'); return false;" href="" />
+            </a>
+            <!-- Subtraction (-) Key -->
+            <a href="" title="SUBTRACT/]/W">
+              <area shape="rect" coords="138,154,150,160" 
+              alt="Subtraction Button" 
+              onclick="ScreenOutput('-'); return false;" href="" />
+            </a>
+            <!-- Addition (+) Key -->
+            <a href="" title='ADDITION/MEM/"'>
+              <area shape="rect" coords="138,165,150,172" 
+              alt="Addition Button" 
+              onclick="ScreenOutput('+'); return false;" href="" />
+            </a>
+            <!-- ENTER Key -->
+            <a href="" title="ENTER/ENTRY/SOLVE">
+              <area shape="rect" coords="138,175,149,188" 
+              alt="Enter Button" 
+              onclick="ScreenOutput('ENTER'); return false;" href="" />
+            </a>
+            <!-- Directional Arrow Keys -->
+            <!-- Up Arrow Key -->
+            <a href="" title="UP ARROW">
+              <area shape="rect" coords="134,86,143,96" 
+              alt="Up Button" 
+              onclick="ScreenOutput('UP'); return false;" href="" />
+            </a>
+            <!-- Down Arrow Key -->
+            <a href="" title="DOWN ARROW">
+              <area shape="rect" coords="134,99,143,109" 
+              alt="Down Button" 
+              onclick="ScreenOutput('DOWN'); return false;" href="" />
+            </a>
+            <!-- Right Arrow Key -->
+            <a href="" title="RIGHT ARROW">
+              <area shape="rect" coords="144,93,153,102" 
+              alt="Right Button" 
+              onclick="ScreenOutput('RIGHT'); return false;" href="" />
+            </a>
+            <!-- Left Arrow Key -->
+            <a href="" title="LEFT ARROW">
+              <area shape="rect" coords="125,93,134,102" 
+              alt="Left Button" 
+              onclick="ScreenOutput('LEFT'); return false;" href="" />
+            </a>
+            <!-- 
+                TODO: start on javascript code, end all tags correctly and 
+                tooltips on hover to see what each button is easier 
+                Add classes for each a tag on each button to display 
+                tooltips on hover
+            -->
+      
+        </map>   
+      </div>
     </body>
-</html>
+  </html>
