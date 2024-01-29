@@ -6,7 +6,7 @@ and open the template in the editor.
 -->
 <html>
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"/>
     <title>Title</title>
     <script type="text/javascript">
             
@@ -14,7 +14,8 @@ and open the template in the editor.
 
     function TI84Sim() {
 
-      window.open( "ti84plussilver.html", "TI84Sim", "status = 1, height = 225, width = 225, resizable = 0" );
+      window.open( "ti84plussilver.html", "TI84Sim", 
+      "status = 1, height = 225, width = 225, resizable = 0" );
 
     }
 
@@ -22,7 +23,8 @@ and open the template in the editor.
     </script>
   </head>
   <body>
-    <form> <input type="button" onClick="TI84Sim()" value="TI-84 Plus Silver Edition Simulator"> </form>
+    <form> <input type="button" onClick="TI84Sim()" 
+    value="TI-84 Plus Silver Edition Simulator"/> </form>
       <?php
       // put your code here
       ?>
