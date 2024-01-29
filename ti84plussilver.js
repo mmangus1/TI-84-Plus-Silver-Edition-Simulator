@@ -18,21 +18,19 @@ var statplot1status = "Off";
 
 //TODO: Find Every Multiple Beyond 16 of charcters and add a line break for every 16 characters.
 function countcharacters(screencommands){
-    var screenlength = screencommands.length;
-    if (screenlength >= 16){
-        
-    }
-            
+  var screenlength = screencommands.length;
+  if (screenlength >= 16){
+  }
 }
 
 
-function statplot1onofffun(statplot1onoff){
-    if (statplot1onoff === true){
-        return "On";
-        }
-    else{
-        return "Off";
-        }
+function statplot1onofffun(statplot1onoff) {
+  if (statplot1onoff === true) {
+    return "On";
+  }
+  else {
+    return "Off";
+  }
 }
 
 function ScreenOutput(value){
