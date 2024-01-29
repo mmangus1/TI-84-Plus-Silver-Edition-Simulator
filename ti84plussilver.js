@@ -40,123 +40,93 @@ function screenoutput(value) {
     alphaonoff=!alphaonoff;
   }
   // Alpha Key On and Second Key Off OR Alpha Key On and Second Key On; Alpha Takes Presedence
-  if (((alphaonoff === true) && (secondonoff === false)) || ((alphaonoff === true) && (secondonoff === true))) {
+  if (((alphaonoff === true) && (secondonoff === false)) || 
+  ((alphaonoff === true) && (secondonoff === true))) {
     switch (value){
       // Incase value String Is Not Set
       case "undefined":
         value = "";
         break;
-    // Top Row Keys, Left To Right:
-    // F1 Key Code:
+      // Top Row Keys, Left To Right:
+      // F1 Key Code:
       case "Y=":
         break;
-    // F2 Key Code:
+      // F2 Key Code:
       case "WIN":
         break;
-    // F3 Key Code:
+      // F3 Key Code:
       case "ZOOM":
         break;
-    // F4 Key Code:
+      // F4 Key Code:
       case "TRACE":
         break;
     // F5 Key Code:
       case "GRAPH":
         break;
-                
-            
-            // First Column Keys, From Top To Bottom:
-            
-            
-            // "A" Variable Key Code:
-            case "MATH":
-                break;
-                
-            // "D" Vatiable Key Code:
-            case "POWERNEGONE":
-                break;
-                
-            // "I" Variable Key Code:
-            case "SECPOW":
-                break;
-                
-            // "N" Variable Key Code:
-            case "LOG":
-                break;
-                
-            // "S" Variable Key Code:
-            case "LN":
-                break;
-                
-            // "X" Variable Key Code:
-            case "STO":
-                break;
-                
-            
-            // Second Column Keys, From Top To Bottom:
-            
-            
-            // "B" Variable Key Code:
-            case "APPS":
-                break;
-                
-            // "E" Variable Key Code:
-            case "SIN":
-                break;
-                
-            // "J" Variable Key Code:
-            case "COMMA":
-                break;
-                
-            // "O" Variable Key Code:
-            case "7":
-                break;
-                
-            // "T" Variable Key Code:
-            case "4":
-                break;
-                
-            // "Y" Variable Key Code:
-            case "1":
-                break;
-                
-            // Space "_" Key Code:
-            case "0":
-                break;
-                
-                
-            // Third Column Key Codes, From Top To Bottom:
-            
-            
-            // "C" Variable Key Code:
-            case "PRGM":
-                break;
-                
-            // "F" Variable Key Code:
-            case "COS":
-                break;
-                
-            // "K" Variable Key Code:
-            case "(":
-                break;
-                
-            // "P" Variable Key Code:
-            case "8":
-                break;
-                
-            // "U" Variable Key Code:
-            case "5":
-                break;
-                
-            // "Z" Variable Key Code:
-            case "2":
-                break;
-                
-            // Colon Key Code:
-            case ".":
-                break;
-                
-            
-            // Fourth Column Key Codes, From Top To Bottom:
+      // First Column Keys, From Top To Bottom:
+      // "A" Variable Key Code:
+      case "MATH":
+        break;
+      // "D" Vatiable Key Code:
+      case "POWERNEGONE":
+        break;
+      // "I" Variable Key Code:
+      case "SECPOW":
+        break;
+      // "N" Variable Key Code:
+      case "LOG":
+        break;
+      // "S" Variable Key Code:
+      case "LN":
+        break;
+      // "X" Variable Key Code:
+      case "STO":
+        break;
+      // Second Column Keys, From Top To Bottom:
+      // "B" Variable Key Code:
+      case "APPS":
+        break;
+      // "E" Variable Key Code:
+      case "SIN":
+        break;
+      // "J" Variable Key Code:
+      case "COMMA":
+        break;
+      // "O" Variable Key Code:
+      case "7":
+        break;
+      // "T" Variable Key Code:
+      case "4":
+        break;
+      // "Y" Variable Key Code:
+      case "1":
+        break;
+      // Space "_" Key Code:
+      case "0":
+        break;
+      // Third Column Key Codes, From Top To Bottom:
+      // "C" Variable Key Code:
+      case "PRGM":
+        break;
+      // "F" Variable Key Code:
+      case "COS":
+        break;
+      // "K" Variable Key Code:
+      case "(":
+        break;
+      // "P" Variable Key Code:
+      case "8":
+        break;
+      // "U" Variable Key Code:
+      case "5":
+        break;
+      // "Z" Variable Key Code:
+      case "2":
+        break;
+      // Colon Key Code:
+      case ".":
+        break;
+      // Fourth Column Key Codes, From Top To Bottom:
             
             
             // "G" Variable Key Code:
