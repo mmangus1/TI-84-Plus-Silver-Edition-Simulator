@@ -16,7 +16,7 @@ var statplot1status = "Off";
 //TODO: Find working way to make cursor blink on/off.
 
 
-//TODO: Find Every Multiple Beyond 16 of charcters and add a line break for every 16 characters.
+//TODO: Find Every Multiple Beyond 16 of characters and add a line break for every 16 characters.
 function countcharacters(screencommands){
   var screenlength = screencommands.length;
   if (screenlength >= 16){
@@ -33,7 +33,7 @@ function statplot1onofffun(statplot1onoff) {
   }
 }
 
-function ScreenOutput(value){
+function screenoutput(value){
     
     
     // Negate Value of 2nd Key On Click Of 2nd Key:
@@ -267,27 +267,27 @@ function ScreenOutput(value){
            
             //STAT PLOT/Y=
             case "Y=":
-                document.getElementById("ScreenOutput").innerHTML = '<div class="statplotmenu"><p class="statplotmenu">STATPLOTS</p>' + '<br/>' + '<a href="">1:</a>Plot1...' + statplot1onofffun(statplot1onoff) + '<br />' + '<img src="" alt=""/>' + '<p>L1</p>';
+                document.getElementById("screenoutput").innerHTML = '<div class="statplotmenu"><p class="statplotmenu">STATPLOTS</p>' + '<br/>' + '<a href="">1:</a>Plot1...' + statplot1onofffun(statplot1onoff) + '<br />' + '<img src="" alt=""/>' + '<p>L1</p>';
                 break;
                 
             //TBLSET Function
             case "WIN":
-                document.getElementById("ScreenOutput").innerHTML = '<div class="tblset"><p class="tblset">TABLE SETUP</p> </div>';
+                document.getElementById("screenoutput").innerHTML = '<div class="tblset"><p class="tblset">TABLE SETUP</p> </div>';
                 break;
                 
             //FORMAT function
             case "ZOOM":
-                document.getElementById("ScreenOutput").innerHTML = '';
+                document.getElementById("screenoutput").innerHTML = '';
                 break;
                 
             //CALC function
             case "TRACE":
-                document.getElementById("ScreenOutput").innerHTML = '';
+                document.getElementById("screenoutput").innerHTML = '';
                 break;
                 
             //TABLE function
             case "GRAPH":
-                document.getElementById("ScreenOutput").innerHTML = '';
+                document.getElementById("screenoutput").innerHTML = '';
                 break;
                 
             // FIRST COLUMN KEYS, TOP TO BOTTOM
@@ -295,37 +295,37 @@ function ScreenOutput(value){
             
             // TEST BUTTON CODE
             case "MATH":
-                document.getElementById("ScreenOutput").innerHTML = '';
+                document.getElementById("screenoutput").innerHTML = '';
                 break;
                 
             // MATRIX BUTTON CODE
             case "POWERNEGONE":
-                document.getElementById("ScreenOutput").innerHTML = '';
+                document.getElementById("screenoutput").innerHTML = '';
                 break;
                 
             // SQUARE ROOT CODE
             case "SECPOW":
-                document.getElementById("ScreenOutput").innerHTML = '';
+                document.getElementById("screenoutput").innerHTML = '';
                 break;
                 
             // TEN TO THE POWER OF CODE
             case "LOG":
-                document.getElementById("ScreenOutput").innerHTML = '';
+                document.getElementById("screenoutput").innerHTML = '';
                 break;
                 
             // EULER'S NUMBER TO THE POWER OF/ THE NATURAL NUMBER TO THE POWER OF CODE
             case "LN":
-                document.getElementById("ScreenOutput").innerHTML = '';
+                document.getElementById("screenoutput").innerHTML = '';
                 break;
                 
             // RECALL CODE
             case "STO":
-                document.getElementById("ScreenOutput").innerHTML = '';
+                document.getElementById("screenoutput").innerHTML = '';
                 break;
                 
             // OFF CODE
             case "ONOFF":
-                document.getElementById("ScreenOutput").innerHTML = '';
+                document.getElementById("screenoutput").innerHTML = '';
                 break;
                 
                 
@@ -334,47 +334,47 @@ function ScreenOutput(value){
             
             // QUIT CODE
             case "MODE":
-                document.getElementById("ScreenOutput").innerHTML = '';
+                document.getElementById("screenoutput").innerHTML = '';
                 break;
                 
             // LINK CODE
             case "VAR":
-                document.getElementById("ScreenOutput").innerHTML = '';
+                document.getElementById("screenoutput").innerHTML = '';
                 break;
                 
             // ANGLE CODE
             case "APPS":
-                document.getElementById("ScreenOutput").innerHTML = '';
+                document.getElementById("screenoutput").innerHTML = '';
                 break;
                 
             // INVERSE SINE CODE
             case "SIN":
-                document.getElementById("ScreenOutput").innerHTML = '';
+                document.getElementById("screenoutput").innerHTML = '';
                 break;
                 
             // ENTER EXPONENT CODE
             case "COMMA":
-                document.getElementById("ScreenOutput").innerHTML = '';
+                document.getElementById("screenoutput").innerHTML = '';
                 break;
                 
             // u CODE TODO: FIND WHAT THIS BUTTON DOES
             case "7":
-                document.getElementById("ScreenOutput").innerHTML = '';
+                document.getElementById("screenoutput").innerHTML = '';
                 break;
                 
             // L4 LIST CODE
             case "4":
-                document.getElementById("ScreenOutput").innerHTML = '';
+                document.getElementById("screenoutput").innerHTML = '';
                 break;
                 
             // L1 LIST CODE
             case "1":
-                document.getElementById("ScreenOutput").innerHTML = '';
+                document.getElementById("screenoutput").innerHTML = '';
                 break;
                                          
             // CATALOG function
             case "0":
-                document.getElementById("ScreenOutput").innerHTML = '<div class="catalogmenu"><p class="catalogheader">CATALOG</p><br/><a href="#home">abs(</a><br/><a href="#news">and</a><br/><a href="#contact">Contact</a><br/><a href="#about">About</a></div>';
+                document.getElementById("screenoutput").innerHTML = '<div class="catalogmenu"><p class="catalogheader">CATALOG</p><br/><a href="#home">abs(</a><br/><a href="#news">and</a><br/><a href="#contact">Contact</a><br/><a href="#about">About</a></div>';
                 break;
                 
             
@@ -383,48 +383,48 @@ function ScreenOutput(value){
             
             // INSERT MODE KEY CODE
             case "DEL":
-                document.getElementById("ScreenOutput").innerHTML = '';
+                document.getElementById("screenoutput").innerHTML = '';
                 break;
                 
             // LIST MANIPULATION MENU KEY CODE
             case "STAT":
-                document.getElementById("ScreenOutput").innerHTML = '';
+                document.getElementById("screenoutput").innerHTML = '';
                 break;
                 
             // DRAW MANIPULATION MENU KEY CODE
             case "PGRM":
-                document.getElementById("ScreenOutput").innerHTML = '';
+                document.getElementById("screenoutput").innerHTML = '';
                 break;
                 
             // INVERSE COSINE KEY CODE
             case "COS":
-                document.getElementById("ScreenOutput").innerHTML = '';
+                document.getElementById("screenoutput").innerHTML = '';
                 break;
                 
             // LEFT BRACE KEY CODE
             case "(":
-                document.getElementById("ScreenOutput").innerHTML = '';
+                document.getElementById("screenoutput").innerHTML = '';
                 break;
                 
             // v CODE TODO: FIND OUT WHAT THIS KEY DOES
             case "8":
-                document.getElementById("ScreenOutput").innerHTML = '';
+                document.getElementById("screenoutput").innerHTML = '';
                 break;
                 
             // L5 LIST KEY CODE
             case "5":
-                document.getElementById("ScreenOutput").innerHTML = '';
+                document.getElementById("screenoutput").innerHTML = '';
                 break;
                 
             // L2 LIST KEY CODE
             case "2":
-                document.getElementById("ScreenOutput").innerHTML = '';
+                document.getElementById("screenoutput").innerHTML = '';
                 break;
                 
             // IMAGINARY NUMBER KEY CODE
             case ".":
                 screencommands+="i";
-                document.getElementById("ScreenOutput").innerHTML = screencommands;
+                document.getElementById("screenoutput").innerHTML = screencommands;
                 javascriptcommands+="math.i";
                 break;
 
@@ -434,37 +434,37 @@ function ScreenOutput(value){
             
             // DISTROBUTION MENU KEY CODE
             case "VARS":
-                document.getElementById("ScreenOutput").innerHTML = screencommands;
+                document.getElementById("screenoutput").innerHTML = screencommands;
                 break;
                 
             // INVERSE TANGENT KEY CODE
             case "TAN":
-                document.getElementById("ScreenOutput").innerHTML = '';
+                document.getElementById("screenoutput").innerHTML = '';
                 break;
                 
             // RIGHT BRACE KEY CODE
             case ")":
-                document.getElementById("ScreenOutput").innerHTML = '';
+                document.getElementById("screenoutput").innerHTML = '';
                 break;
                 
             // w KEY CODE TODO: FIND WHAT THIS KEY DOES
             case "9":
-                document.getElementById("ScreenOutput").innerHTML = '';
+                document.getElementById("screenoutput").innerHTML = '';
                 break;
                 
             // L6 LIST KEY CODE
             case "6":
-                document.getElementById("ScreenOutput").innerHTML = '';
+                document.getElementById("screenoutput").innerHTML = '';
                 break;
                 
             // L3 LIST KEY CODE
             case "3":
-                document.getElementById("ScreenOutput").innerHTML = '';
+                document.getElementById("screenoutput").innerHTML = '';
                 break;
                 
             // ANSWER KEY CODE
             case "HYPHEN":
-                document.getElementById("ScreenOutput").innerHTML = '';
+                document.getElementById("screenoutput").innerHTML = '';
                 break;
                 
            
@@ -473,32 +473,32 @@ function ScreenOutput(value){
             
             // PI KEY CODE
             case "**":
-                document.getElementById("ScreenOutput").innerHTML = '';
+                document.getElementById("screenoutput").innerHTML = '';
                 break;
                 
             // EULER'S NUMBER/ THE NATURAL NUMBER
             case "/":
-                document.getElementById("ScreenOutput").innerHTML = '';
+                document.getElementById("screenoutput").innerHTML = '';
                 break;
                 
             // LEFT BRACKET KEY CODE
             case "*":
-                document.getElementById("ScreenOutput").innerHTML = '';
+                document.getElementById("screenoutput").innerHTML = '';
                 break;
                 
             // RIGHT BRacket KEY CODE
             case "-":
-                document.getElementById("ScreenOutput").innerHTML = '';
+                document.getElementById("screenoutput").innerHTML = '';
                 break;
                 
             // MEMORY KEY CODE
             case "+":
-                document.getElementById("ScreenOutput").innerHTML = '';
+                document.getElementById("screenoutput").innerHTML = '';
                 break;
                 
             // ENTRY KEY CODE
             case "ENTER":
-                document.getElementById("ScreenOutput").innerHTML = '';
+                document.getElementById("screenoutput").innerHTML = '';
                 break;
                 
             // DIRECTIONAL ARROW KEY CODES
@@ -538,90 +538,90 @@ function ScreenOutput(value){
             break;
         case "0":
             screencommands+="0";
-            document.getElementById("ScreenOutput").innerHTML = screencommands;
+            document.getElementById("screenoutput").innerHTML = screencommands;
             javascriptcommands+="0";
             break;
         case "1":
             screencommands+="1";
-            document.getElementById("ScreenOutput").innerHTML = screencommands;
+            document.getElementById("screenoutput").innerHTML = screencommands;
             javascriptcommands+="1";
             break;
         case "2":
             screencommands+="2";
-            document.getElementById("ScreenOutput").innerHTML = screencommands;
+            document.getElementById("screenoutput").innerHTML = screencommands;
             javascriptcommands+="2";
             break;
         case "3":
             screencommands+="3";
-            document.getElementById("ScreenOutput").innerHTML = screencommands;
+            document.getElementById("screenoutput").innerHTML = screencommands;
             javascriptcommands+="3";
             break;
         case "4":
             screencommands+="4";
-            document.getElementById("ScreenOutput").innerHTML = screencommands;
+            document.getElementById("screenoutput").innerHTML = screencommands;
             javascriptcommands+="4";
             break;
         case "5":
             screencommands+="5";
-            document.getElementById("ScreenOutput").innerHTML = screencommands;
+            document.getElementById("screenoutput").innerHTML = screencommands;
             javascriptcommands+="5";
             break;
         case "6":
             screencommands+="6";
-            document.getElementById("ScreenOutput").innerHTML = screencommands;
+            document.getElementById("screenoutput").innerHTML = screencommands;
             javascriptcommands+="6";
             break;
         case "7":
             screencommands+="7";
-            document.getElementById("ScreenOutput").innerHTML = screencommands;
+            document.getElementById("screenoutput").innerHTML = screencommands;
             javascriptcommands+="7";
             break;
         case "8":
             screencommands+="8";
-            document.getElementById("ScreenOutput").innerHTML = screencommands;
+            document.getElementById("screenoutput").innerHTML = screencommands;
             javascriptcommands+="8";
             break;
         case "9":
             screencommands+="9";
-            document.getElementById("ScreenOutput").innerHTML = screencommands;
+            document.getElementById("screenoutput").innerHTML = screencommands;
             javascriptcommands+="9";
             break;
         case "+":
             screencommands+="+";
-            document.getElementById("ScreenOutput").innerHTML = screencommands;
+            document.getElementById("screenoutput").innerHTML = screencommands;
             javascriptcommands+="+";
             break;
         case "-":
             screencommands+="-";
-            document.getElementById("ScreenOutput").innerHTML = screencommands;
+            document.getElementById("screenoutput").innerHTML = screencommands;
             javascriptcommands+="-";
             break;
         case "*":
             screencommands+="*";
-            document.getElementById("ScreenOutput").innerHTML = screencommands;
+            document.getElementById("screenoutput").innerHTML = screencommands;
             javascriptcommands+="*";
             break;
         case "/":
             screencommands+="/";
-            document.getElementById("ScreenOutput").innerHTML = screencommands;
+            document.getElementById("screenoutput").innerHTML = screencommands;
             javascriptcommands+="/";
             break;
             
         // TODO: Have to add a history function by saving the last few values in strings from the javascriptcommands string. Have to find how many are saved in hisrtory also.
         case "CLEAR":
             screencommands="";
-            document.getElementById("ScreenOutput").innerHTML = screencommands;
+            document.getElementById("screenoutput").innerHTML = screencommands;
             javascriptcommands="";
             break;
         case "**":
             screencommands+="^"; // TODO: find the appropriate power to text for the screen.
-            document.getElementById("ScreenOutput").innerHTML = screencommands;
+            document.getElementById("screenoutput").innerHTML = screencommands;
             javascriptcommands+="**";
             break;
             
         // TODO: Put answer to problem right aligned and one line down.
         case "ENTER":
-            document.getElementById("ScreenOutput").innerHTML = (eval(javascriptcommands));
+            document.getElementById("screenoutput").innerHTML = (eval(javascriptcommands));
             break;
         case "2nd":
             if(secondonoff === "Off"){
@@ -645,32 +645,32 @@ function ScreenOutput(value){
             break;
         case "POWERNEGONE":
             screencommands+="^-1"; // TODO: find appropriate symbol for text on screen.
-            document.getElementById("ScreenOutput").innerHTML = screencommands;
+            document.getElementById("screenoutput").innerHTML = screencommands;
             javascriptcommands+="**-1";
             break;
         case "SECPOW":
             screencommands+="^2"; // TODO: find appropriate symbol for text on screen.
-            document.getElementById("ScreenOutput").innerHTML = screencommands;
+            document.getElementById("screenoutput").innerHTML = screencommands;
             javascriptcommands+="**2";
             break;
         case "LOG":
             screencommands+="Log(";
-            document.getElementById("ScreenOutput").innerHTML = screencommands;
+            document.getElementById("screenoutput").innerHTML = screencommands;
             javascriptcommands+="Math.log(";
             break;
         case "LN":
             screencommands+="ln(";
-            document.getElementById("ScreenOutput").innerHTML = screencommands;
+            document.getElementById("screenoutput").innerHTML = screencommands;
             javascriptcommands+="Math.LN(";
             break;
         case "STO":
             break;
         case "ONOFF":
             if (onoff===true){
-                document.getElementById("ScreenOutput").style.display = "block";
+                document.getElementById("screenoutput").style.display = "block";
             }
             else if (onoff===false) {
-                document.getElementById("ScreenOutput").style.display = "none";
+                document.getElementById("screenoutput").style.display = "none";
             }
             onoff = !onoff;
             break;
@@ -680,17 +680,17 @@ function ScreenOutput(value){
             break;
         case "SIN":
             screencommands+="sin(";
-            document.getElementById("ScreenOutput").innerHTML = screencommands;
+            document.getElementById("screenoutput").innerHTML = screencommands;
             javascriptcommands+="Math.sin(";
             break;
         case "COMMA":
             screencommands+=",";
-            document.getElementById("ScreenOutput").innerHTML = screencommands;
+            document.getElementById("screenoutput").innerHTML = screencommands;
             javascriptcommands+=",";
             break;
         case "DEL":
             screencommands.slice(0, -1);
-            document.getElementById("ScreenOutput").innerHTML = screencommands;
+            document.getElementById("screenoutput").innerHTML = screencommands;
             javascriptcommands.slice(0, -1);
             //TODO: Add more code to remove whole mathematic functions in the javascriptcommands string.
             break;
@@ -700,34 +700,34 @@ function ScreenOutput(value){
             break;
         case "COS":
             screencommands+="cos(";
-            document.getElementById("ScreenOutput").innerHTML = screencommands;
+            document.getElementById("screenoutput").innerHTML = screencommands;
             javascriptcommands+="Math.cos(";
             break;
         case "(":
             screencommands+="(";
-            document.getElementById("ScreenOutput").innerHTML = screencommands;
+            document.getElementById("screenoutput").innerHTML = screencommands;
             javascriptcommands+="(";
             break;
         case ".":
             screencommands+=".";
-            document.getElementById("ScreenOutput").innerHTML = screencommands;
+            document.getElementById("screenoutput").innerHTML = screencommands;
             javascriptcommands+=".";
             break;
         case "VARS":
             break;
         case "TAN":
             screencommands+="tan(";
-            document.getElementById("ScreenOutput").innerHTML = screencommands;
+            document.getElementById("screenoutput").innerHTML = screencommands;
             javascriptcommands+="Math.tan(";
             break;
         case ")":
             screencommands+=")";
-            document.getElementById("ScreenOutput").innerHTML = screencommands;
+            document.getElementById("screenoutput").innerHTML = screencommands;
             javascriptcommands+=")";
             break;
         case "HYPHEN":
             screencommands+="-"; //HYPHEN-MINUS
-            document.getElementById("ScreenOutput").innerHTML = screencommands;
+            document.getElementById("screenoutput").innerHTML = screencommands;
             javascriptcommands+="-";
             break;
         case "UP":
