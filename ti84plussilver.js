@@ -17,13 +17,11 @@ var statplot1status = "Off";
 
 
 //TODO: Find Every Multiple Beyond 16 of characters and add a line break for every 16 characters.
-function countcharacters(screencommands){
+function countcharacters(screencommands) {
   var screenlength = screencommands.length;
-  if (screenlength >= 16){
+  if (screenlength >= 16) {
   }
 }
-
-
 function statplot1onofffun(statplot1onoff) {
   if (statplot1onoff === true) {
     return "On";
@@ -32,57 +30,38 @@ function statplot1onofffun(statplot1onoff) {
     return "Off";
   }
 }
-
-function screenoutput(value){
-    
-    
-    // Negate Value of 2nd Key On Click Of 2nd Key:
-    if (value === "2nd"){
-        secondonoff=!secondonoff;
-    }
-    
-    
-    // Negate Value of Alpha Key On Click Of Alpha Key:
-    if (value === "ALPHA"){
-        alphaonoff=!alphaonoff;
-    }
-    
-  
-    
-    
-    // Alpha Key On and Second Key Off OR Alpha Key On and Second Key On; Alpha Takes Presedence
-    if (((alphaonoff === true) && (secondonoff === false)) || ((alphaonoff === true) && (secondonoff === true))) {
-        switch (value){
-            
-            
-            // Incase value String Is Not Set
-            case "undefined":
-                value = "";
-                break;
-                
-                
-            // Top Row Keys, Left To Right:
-            
-            
-            // F1 Key Code:
-            case "Y=":
-                break;
-                
-            // F2 Key Code:
-            case "WIN":
-                break;
-                
-            // F3 Key Code:
-            case "ZOOM":
-                break;
-                
-            // F4 Key Code:
-            case "TRACE":
-                break;
-            
-            // F5 Key Code:
-            case "GRAPH":
-                break;
+function screenoutput(value) {
+  // Negate Value of 2nd Key On Click Of 2nd Key:
+  if (value === "2nd") {
+    secondonoff=!secondonoff;
+  }
+  // Negate Value of Alpha Key On Click Of Alpha Key:
+  if (value === "ALPHA"){
+    alphaonoff=!alphaonoff;
+  }
+  // Alpha Key On and Second Key Off OR Alpha Key On and Second Key On; Alpha Takes Presedence
+  if (((alphaonoff === true) && (secondonoff === false)) || ((alphaonoff === true) && (secondonoff === true))) {
+    switch (value){
+      // Incase value String Is Not Set
+      case "undefined":
+        value = "";
+        break;
+    // Top Row Keys, Left To Right:
+    // F1 Key Code:
+      case "Y=":
+        break;
+    // F2 Key Code:
+      case "WIN":
+        break;
+    // F3 Key Code:
+      case "ZOOM":
+        break;
+    // F4 Key Code:
+      case "TRACE":
+        break;
+    // F5 Key Code:
+      case "GRAPH":
+        break;
                 
             
             // First Column Keys, From Top To Bottom:
