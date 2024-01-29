@@ -14,7 +14,7 @@ and open the template in the editor.
 
             function TI84Sim() {
 
-                window.open( "TI-84 Plus Silver Edition.html", "TI84Sim", "status = 1, height = 225, width = 225, resizable = 0" );
+                window.open( "ti84plussilver.html", "TI84Sim", "status = 1, height = 225, width = 225, resizable = 0" );
 
             }
 
