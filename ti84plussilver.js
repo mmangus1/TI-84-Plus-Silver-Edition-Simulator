@@ -1,51 +1,57 @@
 /* 
- * To change this license header, choose License Headers in Project Properties.
+ * To change this license header, choose License Headers in ProjSTATPLOT1ONOFFect Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
 
-var onoff = true; // on off boolean
-var alphaonoff = false; // a alphaonoff value of 1 is for alpha key not being active, alphaonoff value of 2 is for alpha active - not locked, alphaonoff value of 3 is alpha key active and locked.
-var secondonoff = false; // value of "Off" is second key not active, value of "On" means second key is active
-var screencommands = ""; // Outputs to sreen as text, I set this to blank so nothing is on screen at start.
-var javascriptcommands = ""; // a string meant to hold data and be excuted to by the eval function to return the answers.
-var value = ""; // string that changes the execution based on buttons pushed.
-var statplot1onoff = false;
-var statplot1status = "Off";
-//TODO: Reposition canvas correctly, so when ran buttons work.
-//TODO: Find working way to make cursor blink on/off.
+/*
+ *
+ *
+ * 
+ */
+
+var ONOFF = true; // on off boolean
+var ALPHAONOFF = false; // a ONOFF VALUE of 1 is for alpha key not being active, ONOFF VALUE of 2 is for alpha active - not locked, ONOFF VALUE of 3 is alpha key active and locked.
+var SECONDONOFF = false; // VALUE of "Off" is second key not active, VALUE of "On" means second key is active
+var SCREENCOMMANDS = ""; // Outputs to sreen as text, I set this to blank so nothing is on screen at start.
+var JAVASCRIPTCOMMANDS = ""; // a string meant to hold data and be excuted to by the eval function to return the answers.
+var VALUE = ""; // string that changes the execution based on buttons pushed.
+var STATPLOT1ONOFF = false;
+var STATPLOT1STATUS = "Off";
+// Reposition canvas correctly, so when ran buttons work.
+// Find working way to make cursor blink on/off.
 
 
-//TODO: Find Every Multiple Beyond 16 of characters and add a line break for every 16 characters.
-function countcharacters(screencommands) {
-  var screenlength = screencommands.length;
+// Find Every Multiple Beyond 16 of characters and add a line break for every 16 characters.
+function countcharacters(SCREENCOMMANDS) {
+  var screenlength = SCREENCOMMANDS.length;
   if (screenlength >= 16) {
   }
 }
-function statplot1onofffun(statplot1onoff) {
-  if (statplot1onoff === true) {
+function statplot1ONOFFfun(STATPLOT1ONOFF) {
+  if (statplot1ONOFF === true) {
     return "On";
   }
   else {
     return "Off";
   }
 }
-function screenoutput(value) {
+function screenoutput(VALUE) {
   // Negate Value of 2nd Key On Click Of 2nd Key:
-  if (value === "2nd") {
-    secondonoff=!secondonoff;
+  if (VALUE === "2nd") {
+    secondONOFF=!secondONOFF;
   }
   // Negate Value of Alpha Key On Click Of Alpha Key:
-  if (value === "ALPHA"){
-    alphaonoff=!alphaonoff;
+  if (VALUE === "ALPHA"){
+    ONOFF=!ONOFF;
   }
   // Alpha Key On and Second Key Off OR Alpha Key On and Second Key On; Alpha Takes Presedence
-  if (((alphaonoff === true) && (secondonoff === false)) || 
-  ((alphaonoff === true) && (secondonoff === true))) {
-    switch (value){
-      // Incase value String Is Not Set
+  if (((ONOFF === true) && (secondONOFF === false)) || 
+  ((ONOFF === true) && (secondONOFF === true))) {
+    switch (VALUE){
+      // Incase VALUE String Is Not Set
       case "undefined":
-        value = "";
+        VALUE = "";
         break;
       // Top Row Keys, Left To Right:
       // F1 Key Code:
@@ -60,7 +66,7 @@ function screenoutput(value) {
       // F4 Key Code:
       case "TRACE":
         break;
-    // F5 Key Code:
+      // F5 Key Code:
       case "GRAPH":
         break;
       // First Column Keys, From Top To Bottom:
@@ -127,305 +133,226 @@ function screenoutput(value) {
       case ".":
         break;
       // Fourth Column Key Codes, From Top To Bottom:
-            
-            
-            // "G" Variable Key Code:
-            case "TAN":
-                break;
-                
-            // "L" Variable Key Code:
-            case ")":
-                break;
-                
-            // "O" (Letter) Variable Key Code:
-            case "9":
-                break;
-                
-            // "V" Variable Key Code:
-            case "6":
-                break;
-                
-            // Empty Set Key Code:
-            case "3":
-                break;
-                
-            // Minkowski's Question Mark Function Key Code:
-            case "HYPHEN":
-                break;
-                
-           
-            // Fifth Column Key Codes, From Top To Bottom:
-            
-            
-            // "H" Variable Key Code:
-            case "**":
-                break;
-                
-            // "M" Variable Key Code:
-            case "/":
-                break;
-                
-            // "R" Variable Key Code:
-            case "*":
-                break;
-                
-            // "W" Variable Key Code:
-            case "-":
-                break;
-                
-            // Quotation Mark Key Code:
-            case "+":
-                break;
-                
-            // SOLVE Key Code:
-            case "ENTER":
-                break;
-               
-               
-            // Directional Arrow Key Codes:
-            
-            
-            // Up Arrow Key Code:
-            case "UP":
-                break;
-                
-            // Down Arrow Key Code:
-            case "DOWN":
-                break;
-                
-            // Right Arrow Key Code:
-            case "RIGHT":
-                break;
-                
-            // Left Arrow Key Code:
-            case "LEFT":
-                break;
-        }
+      // "G" Variable Key Code:
+      case "TAN":
+        break;
+      // "L" Variable Key Code:
+      case ")":
+        break;
+      // "O" (Letter) Variable Key Code:
+      case "9":
+        break;
+      // "V" Variable Key Code:
+      case "6":
+        break;
+      // Empty Set Key Code:
+      case "3":
+        break;
+      // Minkowski's Question Mark Function Key Code:
+      case "HYPHEN":
+        break;
+      // Fifth Column Key Codes, From Top To Bottom:
+      // "H" Variable Key Code:
+      case "**":
+        break;
+      // "M" Variable Key Code:
+      case "/":
+        break;
+      // "R" Variable Key Code:
+      case "*":
+        break;
+      // "W" Variable Key Code:
+      case "-":
+        break;
+      // Quotation Mark Key Code:
+      case "+":
+        break;
+      // SOLVE Key Code:
+      case "ENTER":
+        break;
+      // Directional Arrow Key Codes:
+      // Up Arrow Key Code:
+      case "UP":
+        break;
+      // Down Arrow Key Code:
+      case "DOWN":
+        break;
+      // Right Arrow Key Code:
+      case "RIGHT":
+        break;
+      // Left Arrow Key Code:
+      case "LEFT":
+        break;
     }
-    
-    // Second Key On, Alpha Key Off
-    if ((secondonoff === true) && (alphaonoff === false)){
-        switch (value){
-            // Incase value isn't set
-            case "undefined":
-                value = "";
-                break;
-                
-            //TOP ROW KEYS, LEFT TO RIGHT
-            
-           
-            //STAT PLOT/Y=
-            case "Y=":
-                document.getElementById("screenoutput").innerHTML = '<div class="statplotmenu"><p class="statplotmenu">STATPLOTS</p>' + '<br/>' + '<a href="">1:</a>Plot1...' + statplot1onofffun(statplot1onoff) + '<br />' + '<img src="" alt=""/>' + '<p>L1</p>';
-                break;
-                
-            //TBLSET Function
-            case "WIN":
-                document.getElementById("screenoutput").innerHTML = '<div class="tblset"><p class="tblset">TABLE SETUP</p> </div>';
-                break;
-                
-            //FORMAT function
-            case "ZOOM":
-                document.getElementById("screenoutput").innerHTML = '';
-                break;
-                
-            //CALC function
-            case "TRACE":
-                document.getElementById("screenoutput").innerHTML = '';
-                break;
-                
-            //TABLE function
-            case "GRAPH":
-                document.getElementById("screenoutput").innerHTML = '';
-                break;
-                
-            // FIRST COLUMN KEYS, TOP TO BOTTOM
-            
-            
-            // TEST BUTTON CODE
-            case "MATH":
-                document.getElementById("screenoutput").innerHTML = '';
-                break;
-                
-            // MATRIX BUTTON CODE
-            case "POWERNEGONE":
-                document.getElementById("screenoutput").innerHTML = '';
-                break;
-                
-            // SQUARE ROOT CODE
-            case "SECPOW":
-                document.getElementById("screenoutput").innerHTML = '';
-                break;
-                
-            // TEN TO THE POWER OF CODE
-            case "LOG":
-                document.getElementById("screenoutput").innerHTML = '';
-                break;
-                
-            // EULER'S NUMBER TO THE POWER OF/ THE NATURAL NUMBER TO THE POWER OF CODE
-            case "LN":
-                document.getElementById("screenoutput").innerHTML = '';
-                break;
-                
-            // RECALL CODE
-            case "STO":
-                document.getElementById("screenoutput").innerHTML = '';
-                break;
-                
-            // OFF CODE
-            case "ONOFF":
-                document.getElementById("screenoutput").innerHTML = '';
-                break;
-                
-                
-            // SECOND COLUMN KEYS, TOP TO BOTTOM
-            
-            
-            // QUIT CODE
-            case "MODE":
-                document.getElementById("screenoutput").innerHTML = '';
-                break;
-                
-            // LINK CODE
-            case "VAR":
-                document.getElementById("screenoutput").innerHTML = '';
-                break;
-                
-            // ANGLE CODE
-            case "APPS":
-                document.getElementById("screenoutput").innerHTML = '';
-                break;
-                
-            // INVERSE SINE CODE
-            case "SIN":
-                document.getElementById("screenoutput").innerHTML = '';
-                break;
-                
-            // ENTER EXPONENT CODE
-            case "COMMA":
-                document.getElementById("screenoutput").innerHTML = '';
-                break;
-                
-            // u CODE TODO: FIND WHAT THIS BUTTON DOES
-            case "7":
-                document.getElementById("screenoutput").innerHTML = '';
-                break;
-                
-            // L4 LIST CODE
-            case "4":
-                document.getElementById("screenoutput").innerHTML = '';
-                break;
-                
-            // L1 LIST CODE
-            case "1":
-                document.getElementById("screenoutput").innerHTML = '';
-                break;
-                                         
-            // CATALOG function
-            case "0":
-                document.getElementById("screenoutput").innerHTML = '<div class="catalogmenu"><p class="catalogheader">CATALOG</p><br/><a href="#home">abs(</a><br/><a href="#news">and</a><br/><a href="#contact">Contact</a><br/><a href="#about">About</a></div>';
-                break;
-                
-            
-            // THIRD COLUMN KEY CODES, FROM TOP TO BOTTOM
-            
-            
-            // INSERT MODE KEY CODE
-            case "DEL":
-                document.getElementById("screenoutput").innerHTML = '';
-                break;
-                
-            // LIST MANIPULATION MENU KEY CODE
-            case "STAT":
-                document.getElementById("screenoutput").innerHTML = '';
-                break;
-                
-            // DRAW MANIPULATION MENU KEY CODE
-            case "PGRM":
-                document.getElementById("screenoutput").innerHTML = '';
-                break;
-                
-            // INVERSE COSINE KEY CODE
-            case "COS":
-                document.getElementById("screenoutput").innerHTML = '';
-                break;
-                
-            // LEFT BRACE KEY CODE
-            case "(":
-                document.getElementById("screenoutput").innerHTML = '';
-                break;
-                
-            // v CODE TODO: FIND OUT WHAT THIS KEY DOES
-            case "8":
-                document.getElementById("screenoutput").innerHTML = '';
-                break;
-                
-            // L5 LIST KEY CODE
-            case "5":
-                document.getElementById("screenoutput").innerHTML = '';
-                break;
-                
-            // L2 LIST KEY CODE
-            case "2":
-                document.getElementById("screenoutput").innerHTML = '';
-                break;
-                
-            // IMAGINARY NUMBER KEY CODE
-            case ".":
-                screencommands+="i";
-                document.getElementById("screenoutput").innerHTML = screencommands;
-                javascriptcommands+="math.i";
-                break;
-
-            
-            // FOURTH COLUMN KEYS, TOP TO BOTTOM
-            
-            
-            // DISTROBUTION MENU KEY CODE
-            case "VARS":
-                document.getElementById("screenoutput").innerHTML = screencommands;
-                break;
-                
-            // INVERSE TANGENT KEY CODE
-            case "TAN":
-                document.getElementById("screenoutput").innerHTML = '';
-                break;
-                
-            // RIGHT BRACE KEY CODE
-            case ")":
-                document.getElementById("screenoutput").innerHTML = '';
-                break;
-                
-            // w KEY CODE TODO: FIND WHAT THIS KEY DOES
-            case "9":
-                document.getElementById("screenoutput").innerHTML = '';
-                break;
-                
-            // L6 LIST KEY CODE
-            case "6":
-                document.getElementById("screenoutput").innerHTML = '';
-                break;
-                
-            // L3 LIST KEY CODE
-            case "3":
-                document.getElementById("screenoutput").innerHTML = '';
-                break;
-                
-            // ANSWER KEY CODE
-            case "HYPHEN":
-                document.getElementById("screenoutput").innerHTML = '';
-                break;
-                
-           
-            // FIFTH COLUMN KEYS, FROM TOP TO BOTTOM
-            
-            
-            // PI KEY CODE
-            case "**":
-                document.getElementById("screenoutput").innerHTML = '';
-                break;
-                
-            // EULER'S NUMBER/ THE NATURAL NUMBER
+  }
+  // Second Key On, Alpha Key Off
+  if ((secondONOFF === true) && (ONOFF === false)){
+    switch (VALUE){
+      // Incase VALUE isn't set
+      case "undefined":
+        VALUE = "";
+        break;
+      //TOP ROW KEYS, LEFT TO RIGHT
+      //STAT PLOT/Y=
+      case "Y=":
+        document.getElementById("screenoutput").innerHTML = '<div class="statplotmenu"><p class="statplotmenu">STATPLOTS</p>' + '<br/>' + '<a href="">1:</a>Plot1...' + statplot1ONOFFfun(statplot1ONOFF) + '<br />' + '<img src="" alt=""/>' + '<p>L1</p>';
+        break;
+      //TBLSET Function
+      case "WIN":
+        document.getElementById("screenoutput").innerHTML = '<div class="tblset"><p class="tblset">TABLE SETUP</p> </div>';
+        break;
+      //FORMAT function
+      case "ZOOM":
+        document.getElementById("screenoutput").innerHTML = '';
+        break;
+      //CALC function
+      case "TRACE":
+        document.getElementById("screenoutput").innerHTML = '';
+        break;
+      //TABLE function
+      case "GRAPH":
+        document.getElementById("screenoutput").innerHTML = '';
+        break;
+      // FIRST COLUMN KEYS, TOP TO BOTTOM
+      // TEST BUTTON CODE
+      case "MATH":
+        document.getElementById("screenoutput").innerHTML = '';
+        break;
+      // MATRIX BUTTON CODE
+      case "POWERNEGONE":
+        document.getElementById("screenoutput").innerHTML = '';
+        break;
+      // SQUARE ROOT CODE
+      case "SECPOW":
+        document.getElementById("screenoutput").innerHTML = '';
+        break;
+      // TEN TO THE POWER OF CODE
+      case "LOG":
+        document.getElementById("screenoutput").innerHTML = '';
+        break;
+      // EULER'S NUMBER TO THE POWER OF/ THE NATURAL NUMBER TO THE POWER OF CODE
+      case "LN":
+        document.getElementById("screenoutput").innerHTML = '';
+        break;
+      // RECALL CODE
+      case "STO":
+        document.getElementById("screenoutput").innerHTML = '';
+        break;
+      // OFF CODE
+      case "ONOFF":
+        document.getElementById("screenoutput").innerHTML = '';
+        break;
+      // SECOND COLUMN KEYS, TOP TO BOTTOM
+      // QUIT CODE
+      case "MODE":
+        document.getElementById("screenoutput").innerHTML = '';
+        break;
+      // LINK CODE
+      case "VAR":
+        document.getElementById("screenoutput").innerHTML = '';
+        break;
+      // ANGLE CODE
+      case "APPS":
+        document.getElementById("screenoutput").innerHTML = '';
+        break;
+      // INVERSE SINE CODE
+      case "SIN":
+        document.getElementById("screenoutput").innerHTML = '';
+        break;
+      // ENTER EXPONENT CODE
+      case "COMMA":
+        document.getElementById("screenoutput").innerHTML = '';
+        break;
+      // u CODE TODO: FIND WHAT THIS BUTTON DOES
+      case "7":
+        document.getElementById("screenoutput").innerHTML = '';
+        break;
+      // L4 LIST CODE
+      case "4":
+        document.getElementById("screenoutput").innerHTML = '';
+        break;
+      // L1 LIST CODE
+      case "1":
+        document.getElementById("screenoutput").innerHTML = '';
+        break;
+      // CATALOG function
+      case "0":
+        document.getElementById("screenoutput").innerHTML = '<div class="catalogmenu"><p class="catalogheader">CATALOG</p><br/><a href="#home">abs(</a><br/><a href="#news">and</a><br/><a href="#contact">Contact</a><br/><a href="#about">About</a></div>';
+        break;
+      // THIRD COLUMN KEY CODES, FROM TOP TO BOTTOM
+      // INSERT MODE KEY CODE
+      case "DEL":
+        document.getElementById("screenoutput").innerHTML = '';
+        break;
+      // LIST MANIPULATION MENU KEY CODE
+      case "STAT":
+        document.getElementById("screenoutput").innerHTML = '';
+        break;
+      // DRAW MANIPULATION MENU KEY CODE
+      case "PGRM":
+        document.getElementById("screenoutput").innerHTML = '';
+        break;
+      // INVERSE COSINE KEY CODE
+      case "COS":
+        document.getElementById("screenoutput").innerHTML = '';
+        break;
+      // LEFT BRACE KEY CODE
+      case "(":
+        document.getElementById("screenoutput").innerHTML = '';
+        break;
+      // v CODE TODO: FIND OUT WHAT THIS KEY DOES
+      case "8":
+        document.getElementById("screenoutput").innerHTML = '';
+        break;
+      // L5 LIST KEY CODE
+      case "5":
+        document.getElementById("screenoutput").innerHTML = '';
+        break;
+      // L2 LIST KEY CODE
+      case "2":
+        document.getElementById("screenoutput").innerHTML = '';
+        break;
+      // IMAGINARY NUMBER KEY CODE
+      case ".":
+        screencommands+="i";
+        document.getElementById("screenoutput").innerHTML = screencommands;
+        javascriptcommands+="math.i";
+        break;
+      // FOURTH COLUMN KEYS, TOP TO BOTTOM
+      // DISTROBUTION MENU KEY CODE
+      case "VARS":
+        document.getElementById("screenoutput").innerHTML = screencommands;
+        break;
+      // INVERSE TANGENT KEY CODE
+      case "TAN":
+        document.getElementById("screenoutput").innerHTML = '';
+        break;
+      // RIGHT BRACE KEY CODE
+      case ")":
+        document.getElementById("screenoutput").innerHTML = '';
+        break;
+      // w KEY CODE TODO: FIND WHAT THIS KEY DOES
+      case "9":
+        document.getElementById("screenoutput").innerHTML = '';
+        break;
+      // L6 LIST KEY CODE
+      case "6":
+        document.getElementById("screenoutput").innerHTML = '';
+        break;
+      // L3 LIST KEY CODE
+      case "3":
+        document.getElementById("screenoutput").innerHTML = '';
+        break;
+      // ANSWER KEY CODE
+      case "HYPHEN":
+        document.getElementById("screenoutput").innerHTML = '';
+        break;
+      // FIFTH COLUMN KEYS, FROM TOP TO BOTTOM
+      // PI KEY CODE
+      case "**":
+        document.getElementById("screenoutput").innerHTML = '';
+        break;
+      // EULER'S NUMBER/ THE NATURAL NUMBER
             case "/":
                 document.getElementById("screenoutput").innerHTML = '';
                 break;
@@ -476,14 +403,14 @@ function screenoutput(value) {
     
     
     // Second and Alpha Keys both Off
-    if ((secondonoff === false) && (alphaonoff === false)){
+    if ((secondONOFF === false) && (ONOFF === false)){
         
-        // Take value variable that corresponds to keys and make the buttons do as they should.
-        switch(value){
+        // Take VALUE variable that corresponds to keys and make the buttons do as they should.
+        switch(VALUE){
             
         // 
         case "undefined":
-            value = "";
+            VALUE = "";
             break;
         case "0":
             screencommands+="0";
@@ -556,7 +483,7 @@ function screenoutput(value) {
             javascriptcommands+="/";
             break;
             
-        // TODO: Have to add a history function by saving the last few values in strings from the javascriptcommands string. Have to find how many are saved in hisrtory also.
+        // TODO: Have to add a history function by saving the last few VALUEs in strings from the javascriptcommands string. Have to find how many are saved in hisrtory also.
         case "CLEAR":
             screencommands="";
             document.getElementById("screenoutput").innerHTML = screencommands;
@@ -573,19 +500,19 @@ function screenoutput(value) {
             document.getElementById("screenoutput").innerHTML = (eval(javascriptcommands));
             break;
         case "2nd":
-            if(secondonoff === "Off"){
-                secondonoff = "On";
+            if(secondONOFF === "Off"){
+                secondONOFF = "On";
             }
             else{
-                secondonoff = "Off";
+                secondONOFF = "Off";
             }
             break;
         case "ALPHA":
-            if(alphaonoff === "Off"){
-                alphaonoff = "On";
+            if(ONOFF === "Off"){
+                ONOFF = "On";
             }
             else{
-                alphaonoff = "Off";
+                ONOFF = "Off";
             }
             break;
         case "GRAPH":
@@ -615,13 +542,13 @@ function screenoutput(value) {
         case "STO":
             break;
         case "ONOFF":
-            if (onoff===true){
+            if (ONOFF===true){
                 document.getElementById("screenoutput").style.display = "block";
             }
-            else if (onoff===false) {
+            else if (ONOFF===false) {
                 document.getElementById("screenoutput").style.display = "none";
             }
-            onoff = !onoff;
+            ONOFF = !ONOFF;
             break;
         case "MODE":
             break;
